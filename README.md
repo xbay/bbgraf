@@ -2,4 +2,4 @@
 graffito for baby
 
 ### Why baby graffito
-the most important thing is to play with your child.No let them play apps. So bbgraf is production to improving your familyship with your child. Maybe you have no time, maybe you have no idea. Everyday, use bbgraf within 10 mins, create a graffiti with your child.
+Playing with your child is more important than let them playing apps alone. BBgraf is the right app for you. It aims at improving your communication with your child, even you may have no time. It will teach your child simple graffiti within 10 minutes, with or without your help.
