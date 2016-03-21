@@ -3,13 +3,20 @@
  * https://github.com/facebook/react-native
  */
 'use strict';
-import React, {
-  AppRegistry,
-  Component,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React from 'react-native';
+import { createStore } from 'redux'
+
+const {
+    AppRegistry,
+    Component,
+    StyleSheet,
+    Text,
+    View,
+    Navigator,
+    Platform,
+    TabBarIOS,
+    TouchableHighlight
+} = React;
 
 class babydoodle extends Component {
   render() {
