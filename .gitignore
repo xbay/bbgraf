@@ -59,6 +59,10 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+# Cocoapods
+Pods/
+Podfile.lock
+
 
 
 # Created by https://www.gitignore.io/api/android
@@ -109,3 +113,5 @@ gen-external-apklibs
 
 
 
+
+.idea
