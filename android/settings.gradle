@@ -1,0 +1,3 @@
+rootProject.name = 'babydoodle'
+
+include ':app'
