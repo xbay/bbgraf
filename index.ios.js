@@ -5,6 +5,7 @@
 'use strict';
 import React from 'react-native';
 import { createStore } from 'redux'
+import MapView from './app/components/MapView'
 
 const {
     AppRegistry,
@@ -15,23 +16,20 @@ const {
     Navigator,
     Platform,
     TabBarIOS,
-    TouchableHighlight
+    TouchableHighlight,
+  Dimensions
 } = React;
+
+const {
+  width, height
+} = Dimensions.get('window')
 
 class babydoodle extends Component {
   render() {
     return (
+
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <MapView pitchEnabled={false} style={styles.mapView} />
       </View>
     );
   }
@@ -43,6 +41,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  mapView:{
+    height: height/2,
+    width: width
   },
   welcome: {
     fontSize: 20,
