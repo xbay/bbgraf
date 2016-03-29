@@ -23,7 +23,8 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		85C014FEB9265C85DECD180C /* Pods_babydoodle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B78252CFBAA3ACD33AB00B /* Pods_babydoodle.framework */; };
-		C24832C61CA95CBC00754CCD /* RCTBDMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C24832C51CA95CBC00754CCD /* RCTBDMapManager.m */; };
+		C24832E61CA97DE700754CCD /* RoundHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24832E51CA97DE700754CCD /* RoundHeaderView.m */; };
+		C24832E91CA9FC8200754CCD /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24832E81CA9FC8200754CCD /* ShareView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,8 +132,10 @@
 		70B78252CFBAA3ACD33AB00B /* Pods_babydoodle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_babydoodle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		C24832C41CA95CBC00754CCD /* RCTBDMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTBDMapManager.h; sourceTree = "<group>"; };
-		C24832C51CA95CBC00754CCD /* RCTBDMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTBDMapManager.m; sourceTree = "<group>"; };
+		C24832E41CA97DE700754CCD /* RoundHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundHeaderView.h; sourceTree = "<group>"; };
+		C24832E51CA97DE700754CCD /* RoundHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundHeaderView.m; sourceTree = "<group>"; };
+		C24832E71CA9FC8200754CCD /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
+		C24832E81CA9FC8200754CCD /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,8 +243,6 @@
 		13B07FAE1A68108700A75B9A /* babydoodle */ = {
 			isa = PBXGroup;
 			children = (
-				C24832C41CA95CBC00754CCD /* RCTBDMapManager.h */,
-				C24832C51CA95CBC00754CCD /* RCTBDMapManager.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -249,6 +250,10 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				C24832E41CA97DE700754CCD /* RoundHeaderView.h */,
+				C24832E51CA97DE700754CCD /* RoundHeaderView.m */,
+				C24832E71CA9FC8200754CCD /* ShareView.h */,
+				C24832E81CA9FC8200754CCD /* ShareView.m */,
 			);
 			name = babydoodle;
 			sourceTree = "<group>";
@@ -619,8 +624,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24832E61CA97DE700754CCD /* RoundHeaderView.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				C24832C61CA95CBC00754CCD /* RCTBDMapManager.m in Sources */,
+				C24832E91CA9FC8200754CCD /* ShareView.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

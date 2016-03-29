@@ -6,6 +6,7 @@
 import React from 'react-native';
 import { createStore } from 'redux'
 import MapView from './app/components/MapView'
+import RoundHeaderView from './app/components/RoundHeaderView'
 
 const {
     AppRegistry,
@@ -26,10 +27,18 @@ const {
 
 class babydoodle extends Component {
   render() {
+
+    var region = {
+      latitude: 37.48,
+      longitude: -122.16,
+      latitudeDelta: 0.1,
+      longitudeDelta: 0.1,
+    };
+
     return (
 
       <View style={styles.container}>
-        <MapView pitchEnabled={false} style={styles.mapView} />
+        <RoundHeaderView style={styles.mapView} />
       </View>
     );
   }
