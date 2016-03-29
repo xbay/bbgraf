@@ -35,8 +35,11 @@
   CGContextAddLineToPoint(context, width, 0);
   CGContextAddLineToPoint(context, 0, 0);
 
-  CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
+  UIColor *fillColor = [UIColor colorWithRed:125/255.0 green:185/255.0 blue:255/255.0 alpha:0.5];
+
+  CGContextSetFillColorWithColor(context, fillColor.CGColor);
   CGContextFillPath(context);
+  
   
   // 暂时不能一起画
 //    CGContextStrokePath(context);

@@ -36,6 +36,7 @@ RCT_EXPORT_MODULE()
 {
   UITextView *_currentSizeTextView;
   ShareView *_shareView;
+  ShareView *_shareViewSmall;
 }
 
 @end
@@ -60,7 +61,11 @@ RCT_EXPORT_MODULE()
 
     [self addSubview:_shareView];
     
-
+    
+    _shareViewSmall = [ShareView new];
+    _shareViewSmall.backgroundColor = [UIColor clearColor];
+    
+    [self addSubview:_shareViewSmall];
     
   }
   return self;
@@ -70,6 +75,9 @@ RCT_EXPORT_MODULE()
 {
   [_currentSizeTextView setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
   [_shareView setFrame:CGRectMake(0, 60, self.frame.size.width, self.frame.size.height/2)];
+  
+  [_shareViewSmall setFrame:CGRectMake(50, 150, self.frame.size.width/2, 100)];
+
 
 }
 

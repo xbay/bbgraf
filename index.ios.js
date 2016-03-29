@@ -5,7 +5,6 @@
 'use strict';
 import React from 'react-native';
 import { createStore } from 'redux'
-import MapView from './app/components/MapView'
 import RoundHeaderView from './app/components/RoundHeaderView'
 
 const {
