@@ -7,6 +7,7 @@
 //
 
 #import "RCTView.h"
+#import "Person.h"
 
 @interface RoundHeaderView : RCTView
 
