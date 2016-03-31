@@ -6,6 +6,7 @@
 import React from 'react-native';
 import { createStore } from 'redux'
 import RoundHeaderView from './app/components/RoundHeaderView'
+import Person from './app/components/Person'
 
 const {
     AppRegistry,
@@ -33,6 +34,8 @@ class babydoodle extends Component {
       latitudeDelta: 0.1,
       longitudeDelta: 0.1,
     };
+
+    Person.greeting('peter');
 
     return (
 

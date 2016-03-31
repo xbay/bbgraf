@@ -7,14 +7,15 @@
 //
 
 #import "Person.h"
-
+#import "RCTLog.h"
 @implementation Person
 
 RCT_EXPORT_MODULE()
 
-//RCT_EXPORT_METHOD(greeting:(NSString *)name){
-//  NSLog(@"Hi, %@!", name);
-//  [_bridge]
-//}
+RCT_EXPORT_METHOD(greeting:(NSString *)name){
+  NSLog(@"Hi, %@!", name);
+//  RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
+  RCTLogInfo(@"RCTLogInfo Hi, %@!", name);
+}
 
 @end
