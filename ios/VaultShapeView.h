@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RCTLog.m>
 
-@interface ShareView : UIView
+@interface VaultShapeView : UIView
 
 @end

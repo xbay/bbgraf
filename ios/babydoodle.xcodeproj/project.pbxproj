@@ -13,6 +13,8 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* babydoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* babydoodleTests.m */; };
+		04ED62F01CB1DA75006712F1 /* VaultNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED62ED1CB1DA75006712F1 /* VaultNavigationBar.m */; };
+		04ED62F41CB1DAD3006712F1 /* VaultShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ED62F31CB1DAD3006712F1 /* VaultShapeView.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -23,8 +25,6 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		85C014FEB9265C85DECD180C /* Pods_babydoodle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B78252CFBAA3ACD33AB00B /* Pods_babydoodle.framework */; };
-		C24832E61CA97DE700754CCD /* RoundHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24832E51CA97DE700754CCD /* RoundHeaderView.m */; };
-		C24832E91CA9FC8200754CCD /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24832E81CA9FC8200754CCD /* ShareView.m */; };
 		C2F0E6F61CAA122C009FD31A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F0E6F51CAA122C009FD31A /* Person.m */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +118,10 @@
 		00E356EE1AD99517003FC87E /* babydoodleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = babydoodleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* babydoodleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = babydoodleTests.m; sourceTree = "<group>"; };
+		04ED62EC1CB1DA75006712F1 /* VaultNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaultNavigationBar.h; sourceTree = "<group>"; };
+		04ED62ED1CB1DA75006712F1 /* VaultNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VaultNavigationBar.m; sourceTree = "<group>"; };
+		04ED62F21CB1DAD3006712F1 /* VaultShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaultShapeView.h; sourceTree = "<group>"; };
+		04ED62F31CB1DAD3006712F1 /* VaultShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VaultShapeView.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* babydoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babydoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,10 +137,6 @@
 		70B78252CFBAA3ACD33AB00B /* Pods_babydoodle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_babydoodle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		C24832E41CA97DE700754CCD /* RoundHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundHeaderView.h; sourceTree = "<group>"; };
-		C24832E51CA97DE700754CCD /* RoundHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundHeaderView.m; sourceTree = "<group>"; };
-		C24832E71CA9FC8200754CCD /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
-		C24832E81CA9FC8200754CCD /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
 		C2F0E6F41CAA122C009FD31A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		C2F0E6F51CAA122C009FD31A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +227,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		04ED62EB1CB1DA5F006712F1 /* VaultNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				04ED62F21CB1DAD3006712F1 /* VaultShapeView.h */,
+				04ED62F31CB1DAD3006712F1 /* VaultShapeView.m */,
+				04ED62EC1CB1DA75006712F1 /* VaultNavigationBar.h */,
+				04ED62ED1CB1DA75006712F1 /* VaultNavigationBar.m */,
+			);
+			name = VaultNavigationBar;
+			sourceTree = "<group>";
+		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +257,7 @@
 		13B07FAE1A68108700A75B9A /* babydoodle */ = {
 			isa = PBXGroup;
 			children = (
+				04ED62EB1CB1DA5F006712F1 /* VaultNavigationBar */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -253,10 +265,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				C24832E41CA97DE700754CCD /* RoundHeaderView.h */,
-				C24832E51CA97DE700754CCD /* RoundHeaderView.m */,
-				C24832E71CA9FC8200754CCD /* ShareView.h */,
-				C24832E81CA9FC8200754CCD /* ShareView.m */,
 				C2F0E6F41CAA122C009FD31A /* Person.h */,
 				C2F0E6F51CAA122C009FD31A /* Person.m */,
 			);
@@ -629,11 +637,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C24832E61CA97DE700754CCD /* RoundHeaderView.m in Sources */,
+				04ED62F01CB1DA75006712F1 /* VaultNavigationBar.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				C2F0E6F61CAA122C009FD31A /* Person.m in Sources */,
-				C24832E91CA9FC8200754CCD /* ShareView.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				04ED62F41CB1DAD3006712F1 /* VaultShapeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

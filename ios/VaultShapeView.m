@@ -6,9 +6,9 @@
 //  Copyright © 2016 Facebook. All rights reserved.
 //
 
-#import "ShareView.h"
+#import "VaultShapeView.h"
 
-@implementation ShareView
+@implementation VaultShapeView
 
 /*
 // Only override drawRect: if you perform custom drawing.

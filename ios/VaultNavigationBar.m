@@ -6,24 +6,24 @@
 //  Copyright © 2016 Facebook. All rights reserved.
 //
 
-#import "RoundHeaderView.h"
+#import "VaultNavigationBar.h"
 #import "RCTViewManager.h"
 #import "RCTRootViewDelegate.h"
-#import "ShareView.h"
+#import "VaultShapeView.h"
 
-#pragma mark RoundHeaderViewManager
+#pragma mark VaultNavigationBarManager
 
-@interface RoundHeaderViewManager: RCTViewManager
+@interface VaultNavigationBarManager: RCTViewManager
 
 @end
 
-@implementation RoundHeaderViewManager
+@implementation VaultNavigationBarManager
 
 RCT_EXPORT_MODULE()
 
 - (UIView *)view
 {
-  RoundHeaderView  *view = [[RoundHeaderView alloc]initWithFrame:CGRectZero];
+  VaultShapeView  *view = [[VaultShapeView alloc]initWithFrame:CGRectZero];
   [view setNeedsDisplay];
   return view;
 }
@@ -32,16 +32,16 @@ RCT_EXPORT_MODULE()
 
 #pragma mark RoundHeaderView
 
-@interface RoundHeaderView ()
+@interface VaultNavigationBar ()
 {
   UITextView *_currentSizeTextView;
-  ShareView *_shareView;
-  ShareView *_shareViewSmall;
+  VaultShapeView *_shareView;
+  VaultShapeView *_shareViewSmall;
 }
 
 @end
 
-@implementation RoundHeaderView
+@implementation VaultNavigationBar
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
@@ -56,13 +56,13 @@ RCT_EXPORT_MODULE()
     
     [self addSubview:_currentSizeTextView];
     
-    _shareView = [ShareView new];
+    _shareView = [VaultShapeView new];
     _shareView.backgroundColor = [UIColor clearColor];
 
     [self addSubview:_shareView];
     
     
-    _shareViewSmall = [ShareView new];
+    _shareViewSmall = [VaultShapeView new];
     _shareViewSmall.backgroundColor = [UIColor clearColor];
     
     [self addSubview:_shareViewSmall];

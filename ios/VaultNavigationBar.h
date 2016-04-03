@@ -6,9 +6,10 @@
 //  Copyright © 2016 Facebook. All rights reserved.
 //
 
+#import <RCTConvert.h>
 #import "RCTView.h"
 #import "Person.h"
 
-@interface RoundHeaderView : RCTView
+@interface VaultNavigationBar : RCTView
 
 @end
