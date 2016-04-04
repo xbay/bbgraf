@@ -30,8 +30,8 @@
 - (void)drawRect:(CGRect)rect {
   NSLog(@"%f",rect.size.width);
   
-  CGFloat height = 44;
-  CGFloat curvingRate = 1.8;
+  CGFloat height = 60;
+  CGFloat curvingRate = 1.7;
   CGFloat width = rect.size.width;
   
   // Draw shape

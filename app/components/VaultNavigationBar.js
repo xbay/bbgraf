@@ -2,10 +2,20 @@ import React from 'react-native'
 import _ from 'lodash'
 
 const {
+  View,
+  Text,
+  StyleSheet,
   requireNativeComponent,
   Component,
-  PropTypes
+  PropTypes,
+  Dimensions
 } = React;
+
+const {
+  width,
+  height
+} = Dimensions.get('window')
+
 var VaultNavigationBar  = requireNativeComponent('VaultNavigationBar',null);
 
 
@@ -14,27 +24,38 @@ class VaultNavigationView extends Component{
   constructor(props) {
     super(props);
     // 初始状态
-    this.state = {
+    this.state = {};
+
+    this.defaultProps = {
       backgroundColor: '#6FC0F6',
-      title: 'baby doodle'
     };
-
-    _.merge(this.props, {
-      backgroundColor: '#6FC0F6',
-      title: 'baby doodle'
-    })
-    
-    this.props.backgroundColor = '#6FC0F6';
-    console.log('this.props',this.props);
-
+    _.extend(this.defaultProps,this.props);
   }
 
   render(){
-    return <VaultNavigationBar {...this.props} />
+    return(
+      <View>
+        <VaultNavigationBar {...this.defaultProps} />
+        <Text style={styles.title}>baby doodle</Text>
+      </View>
+    );
     // return <VaultNavigationBar backgroundColor="#6FC0F6" title={this.state.title}/>
   }
 }
 
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 24,
+    color: 'white',
+    backgroundColor: 'transparent',
+    textAlign: 'center',
+    height:32,
+    width: width,
+    fontWeight: '400',
+    top:30,
+    position: 'absolute'
+  },
+});
 /*
  * https://facebook.github.io/react/docs/reusable-components.html
  * propTypes

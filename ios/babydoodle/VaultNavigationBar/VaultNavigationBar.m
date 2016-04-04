@@ -38,8 +38,9 @@ RCT_EXPORT_VIEW_PROPERTY(backgroundColor, UIColor)
 @interface VaultNavigationBar ()
 {
   UITextView *_currentSizeTextView;
-  VaultShapeView *_shareView;
-  VaultShapeView *_shareViewSmall;
+  VaultShapeView *_shapeView;
+  VaultShapeView *_shapeViewShadow;
+  UIColor *_shadowColor;
 }
 
 @end
@@ -57,21 +58,24 @@ RCT_EXPORT_VIEW_PROPERTY(backgroundColor, UIColor)
     
     _currentSizeTextView = [UITextView new];
     _currentSizeTextView.editable = NO;
+    _currentSizeTextView.textAlignment = NSTextAlignmentCenter;
+    _currentSizeTextView.textColor = [UIColor whiteColor];
+    _currentSizeTextView.backgroundColor = [UIColor clearColor];
+    _currentSizeTextView.font = [UIFont boldSystemFontOfSize:20];
+    
     _currentSizeTextView.text = [self defaultTitle];
-    _currentSizeTextView.textColor = [UIColor blackColor];
-    _currentSizeTextView.backgroundColor = [UIColor whiteColor];
-    _currentSizeTextView.font = [UIFont boldSystemFontOfSize:14];
+
     
-    [self addSubview:_currentSizeTextView];
+
+    _shapeViewShadow = [VaultShapeView new];
+    [self addSubview:_shapeViewShadow];
     
-    _shareView = [VaultShapeView new];
-    _shareView.drawColor = _backgroundColor;
-    [self addSubview:_shareView];
+    _shapeView = [VaultShapeView new];
+    [self addSubview:_shapeView];
+
     
-    
-    _shareViewSmall = [VaultShapeView new];
-    _shareViewSmall.drawColor = _backgroundColor;
-    [self addSubview:_shareViewSmall];
+//    [self addSubview:_currentSizeTextView];
+
     
   }
   return self;
@@ -85,6 +89,9 @@ RCT_EXPORT_VIEW_PROPERTY(backgroundColor, UIColor)
   }else{
     _backgroundColor = [self defaultBackgroundColor];
   }
+  
+  _shadowColor = [self darkerColorForColor:_backgroundColor];
+  
   [self updateView];
   
 }
@@ -93,29 +100,57 @@ RCT_EXPORT_VIEW_PROPERTY(backgroundColor, UIColor)
 
 - (void)updateView{
   // do update background and text
+  _shapeView.drawColor = _backgroundColor;
+  _shapeViewShadow.drawColor = _shadowColor;
+
 }
 
 // step 3
 
 - (void)layoutSubviews
 {
-  [_currentSizeTextView setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+  [_currentSizeTextView setFrame:CGRectMake(0, 20, self.frame.size.width, 44)];
   
   
-  [_shareView setFrame:CGRectMake(0, 60, self.frame.size.width, self.frame.size.height/2)];
-  [_shareViewSmall setFrame:CGRectMake(50, 150, self.frame.size.width/2, 100)];
+  [_shapeView setFrame:CGRectMake(0, 0, self.frame.size.width, 100)];
+  [_shapeViewShadow setFrame:CGRectMake(0, 5, self.frame.size.width, 100)];
 }
 
 
 
 - (UIColor *)defaultBackgroundColor
 {
-  return [UIColor colorWithRed:125/255.0 green:185/255.0 blue:255/255.0 alpha:0.5];
+  return [UIColor colorWithRed:111/255.0 green:192/255.0 blue:246/255.0 alpha:1];
 }
 
 - (NSString *)defaultTitle
 {
   return @"baby doodle";
+}
+
+
+#pragma mark -- utils
+
+- (UIColor *)lighterColorForColor:(UIColor *)c
+{
+  CGFloat r, g, b, a;
+  if ([c getRed:&r green:&g blue:&b alpha:&a])
+    return [UIColor colorWithRed:MIN(r + 0.08, 1.0)
+                           green:MIN(g + 0.08, 1.0)
+                            blue:MIN(b + 0.08, 1.0)
+                           alpha:a];
+  return nil;
+}
+
+- (UIColor *)darkerColorForColor:(UIColor *)c
+{
+  CGFloat r, g, b, a;
+  if ([c getRed:&r green:&g blue:&b alpha:&a])
+    return [UIColor colorWithRed:MAX(r - 0.08, 0.0)
+                           green:MAX(g - 0.08, 0.0)
+                            blue:MAX(b - 0.08, 0.0)
+                           alpha:a];
+  return nil;
 }
 
 
