@@ -12,4 +12,7 @@
 
 @interface VaultNavigationBar : RCTView
 
+@property (nonatomic, strong) UIColor *backgroundColor;
+@property (nonatomic, strong) NSString *title;
+
 @end

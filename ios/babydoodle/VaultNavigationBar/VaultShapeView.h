@@ -10,4 +10,6 @@
 
 @interface VaultShapeView : UIView
 
+@property (nonatomic, strong)UIColor *drawColor;
+
 @end
