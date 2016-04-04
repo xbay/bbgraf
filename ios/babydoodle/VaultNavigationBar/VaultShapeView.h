@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RCTLog.m>
 
 @interface VaultShapeView : UIView
 

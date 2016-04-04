@@ -5,7 +5,7 @@
 'use strict';
 import React from 'react-native';
 import { createStore } from 'redux'
-import RoundHeaderView from './app/components/RoundHeaderView'
+import VaultNavigationBar from './app/components/VaultNavigationBar'
 
 const {
     AppRegistry,
@@ -37,7 +37,7 @@ class babydoodle extends Component {
     return (
 
       <View style={styles.container}>
-        <RoundHeaderView style={styles.mapView} />
+        <VaultNavigationBar style={styles.mapView} />
       </View>
     );
   }

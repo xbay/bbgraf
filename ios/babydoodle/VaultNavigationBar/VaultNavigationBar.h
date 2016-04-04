@@ -8,7 +8,7 @@
 
 #import <RCTConvert.h>
 #import "RCTView.h"
-#import "Person.h"
+
 
 @interface VaultNavigationBar : RCTView
 

@@ -27,6 +27,9 @@ RCT_EXPORT_MODULE()
   [view setNeedsDisplay];
   return view;
 }
+RCT_EXPORT_METHOD(color:(UIColor*)color andTitle:(NSString *)string){
+  
+}
 
 @end
 
@@ -75,10 +78,7 @@ RCT_EXPORT_MODULE()
 {
   [_currentSizeTextView setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
   [_shareView setFrame:CGRectMake(0, 60, self.frame.size.width, self.frame.size.height/2)];
-  
   [_shareViewSmall setFrame:CGRectMake(50, 150, self.frame.size.width/2, 100)];
-
-
 }
 
 
