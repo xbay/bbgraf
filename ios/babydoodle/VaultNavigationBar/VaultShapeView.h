@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShareView : UIView
+@interface VaultShapeView : UIView
+
+@property (nonatomic, strong)UIColor *drawColor;
 
 @end

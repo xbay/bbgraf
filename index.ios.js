@@ -7,6 +7,7 @@ import React from 'react-native';
 import { createStore } from 'redux'
 import RoundHeaderView from './app/components/RoundHeaderView'
 import Person from './app/components/Person'
+import VaultNavigationBar from './app/components/VaultNavigationBar'
 
 const {
     AppRegistry,
@@ -40,7 +41,7 @@ class babydoodle extends Component {
     return (
 
       <View style={styles.container}>
-        <RoundHeaderView style={styles.mapView} />
+        <VaultNavigationBar style={styles.mapView} />
       </View>
     );
   }
@@ -49,8 +50,7 @@ class babydoodle extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'flex-start',
     backgroundColor: '#F5FCFF',
   },
   mapView:{
