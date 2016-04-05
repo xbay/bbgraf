@@ -40,7 +40,7 @@ class babydoodle extends Component {
     return (
 
       <View style={styles.container}>
-        <VaultNavigationBar config={{title: '',logout:true}} />
+        <VaultNavigationBar config={{title: '',back:true}} />
         <View style={styles.welcome}>
           <Text>Keep Clam and Carry On.</Text>
         </View>

@@ -1,6 +1,6 @@
 import React from 'react-native'
 import _ from 'lodash'
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 
 const {
@@ -49,13 +49,13 @@ class VaultNavigationView extends Component{
     if (this.props.config.back) {
       let backButtonInfo = this.props.config.back
       return (
-        <TouchableOpacity onPress={backButtonInfo.onPress} style={[styles.button, styles.backButton]}>
-          <Icon name="keyboard-arrow-left" style={[styles.buttonIcon, styles.backButtonIcon]} size={30}/>
+        <TouchableOpacity onPress={backButtonInfo.onPress} style={[styles.button]}>
+          <Icon name="chevron-left" style={[styles.buttonIcon]} size={24}/>
           <Text style={[styles.buttonText, styles.backButtonText]}>{backButtonInfo.text}</Text>
         </TouchableOpacity>
       )
     } else {
-      return (<View></View>)
+      return (<View style={styles.button}></View>)
     }
   }
 
@@ -68,7 +68,7 @@ class VaultNavigationView extends Component{
         </TouchableOpacity>
       )
     } else {
-      return (<View></View>)
+      return (<View style={styles.button}></View>)
     }
   }
 
@@ -77,8 +77,8 @@ class VaultNavigationView extends Component{
       <View style={styles.navBar}>
         <VaultNavigationBar style={styles.vaultBG} {...this.defaultProps} />
         <View style={styles.navContext}>
-          <Text style={styles.navTitle}>baby doodle</Text>
           {this.getNavBarBackButton()}
+          <Text style={styles.navTitle}>baby doodle</Text>
           {this.getNavBarForwardButton()}
         </View>
       </View>
@@ -95,19 +95,30 @@ const styles = StyleSheet.create({
 
   },
   navContext:{
-    top:30,
+    top:28,
     position: 'absolute',
-    flexDirection:'column',
-    justifyContent: 'space-between',
+    flexDirection:'row', // 整行布局
+    alignItems: 'center', // 子元素左右对齐
+    justifyContent:'flex-start',
     width: width,
-    backgroundColor:'transparent'
+    height: 36,
+    backgroundColor:'transparent',
   },
   navTitle:{
     fontSize: 24,
     textAlign: 'center',
     fontWeight: '400',
     color: 'white',
-    flex:1
+    flex:1,
+  },
+  button:{
+    width: 60,
+    backgroundColor: 'transparent',
+  },
+  buttonIcon:{
+    color: '#ffffff',
+    marginTop: 20,
+    marginLeft: 20
   }
 });
 /*
