@@ -5,6 +5,7 @@
 'use strict';
 import React from 'react-native';
 import { createStore } from 'redux'
+import Person from './app/components/Person'
 import VaultNavigationBar from './app/components/VaultNavigationBar'
 
 const {
@@ -34,10 +35,15 @@ class babydoodle extends Component {
       longitudeDelta: 0.1,
     };
 
+    Person.greeting('peter');
+
     return (
 
       <View style={styles.container}>
-        <VaultNavigationBar style={styles.mapView} />
+        <VaultNavigationBar config={{title: '',back:true}} />
+        <View style={styles.welcome}>
+          <Text>Keep Clam and Carry On.</Text>
+        </View>
       </View>
     );
   }
@@ -49,14 +55,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     backgroundColor: '#F5FCFF',
   },
-  mapView:{
-    height: height/2,
-    width: width
-  },
   welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    backgroundColor: '#eeeeee',
+    flex:1
   },
   instructions: {
     textAlign: 'center',
